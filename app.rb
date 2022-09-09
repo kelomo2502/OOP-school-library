@@ -39,11 +39,18 @@ class App
     when 1
       print ' Enter student age: '
       age = gets.chomp.to_i
-      print ' Enter classroom: '
-      classroom = gets.chomp
+      # print ' Enter classroom: '
+      # classroom = gets.chomp
+      print 'Parent permission? [Y/N]: '
+    parent_permission = gets.chomp
+    if %w[y Y].include?(parent_permission)
+      parent_permission = true
+    elsif %w[n N].include?(parent_permission)
+      parent_permission == false
+    end
       print ' Enter name: '
       name = gets.chomp
-      new_student = Student.new(age, classroom)
+      new_student = Student.new(age, parent_permission)
       new_student.name = name unless name.empty?
       @students << new_student
       puts " #{new_student.name} added successfully"

@@ -2,6 +2,7 @@ require './book'
 require './student'
 require './teacher'
 require './rental'
+require './person'
 
 class App
   attr_accessor :books, :students, :teachers, :rentals
@@ -31,6 +32,7 @@ class App
     @teachers.each { |s| print "[#{s.class}] Name: #{s.name}, ID: #{s.id}, Age: #{s.age}\n" }
   end
 
+  # rubocop:disable Metrics/CyclomaticComplexity
   def create_person
     print "Do you want to create: \n 1 - Student \n 2 - Teacher \n 3 - Cancel \n "
     user_input = gets.chomp.to_i
@@ -39,15 +41,13 @@ class App
     when 1
       print ' Enter student age: '
       age = gets.chomp.to_i
-      # print ' Enter classroom: '
-      # classroom = gets.chomp
       print 'Parent permission? [Y/N]: '
-    parent_permission = gets.chomp
-    if %w[y Y].include?(parent_permission)
-      parent_permission = true
-    elsif %w[n N].include?(parent_permission)
-      parent_permission == false
-    end
+      parent_permission = gets.chomp
+      if %w[y Y].include?(parent_permission)
+        parent_permission = true
+      elsif %w[n N].include?(parent_permission)
+        parent_permission == false
+      end
       print ' Enter name: '
       name = gets.chomp
       new_student = Student.new(age, parent_permission)
@@ -72,6 +72,7 @@ class App
       create_person
     end
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 
   def create_book
     print "Create book \n"

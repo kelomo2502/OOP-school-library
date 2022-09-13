@@ -1,6 +1,6 @@
 class Create_Person
   def initialize(people)
-    @peopele = people
+    @people = people
   end
 
   def create_person
@@ -22,7 +22,7 @@ class Create_Person
       name = gets.chomp
       new_student = Student.new(age, parent_permission)
       new_student.name = name unless name.empty?
-      @students << new_student
+      @people << new_student
       puts " #{new_student.name} added successfully"
     when 2
       print ' Enter teacher age: '
@@ -33,7 +33,7 @@ class Create_Person
       name = gets.chomp
       new_teacher = Teacher.new(age, specialization)
       new_teacher.name = name unless name.empty?
-      @teachers << new_teacher
+      @people << new_teacher
       puts " #{new_teacher.name} added successfully"
     when 3
       nil

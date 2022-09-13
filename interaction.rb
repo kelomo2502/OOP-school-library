@@ -9,13 +9,13 @@ class Interaction
       app.list_people
       interaction(app)
     when 3
-      app.create_person
+      Create_Person.new(app.people).create_person
       interaction(app)
     when 4
-      app.create_book
+      Create_Book.new(app.books).create_book
       interaction(app)
     when 5
-      app.create_rental
+      Create_Rental.new(app.rental, app.books, app.people).create_rental
       interaction(app)
     when 6
       app.list_rentals

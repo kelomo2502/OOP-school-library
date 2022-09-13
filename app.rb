@@ -5,13 +5,12 @@ require './rental'
 require './person'
 
 class App
-  attr_accessor :books, :students, :teachers, :rentals
+  attr_accessor :books, :rentals, :people
 
   def initialize
     @books = []
-    @students = []
-    @teachers = []
     @rentals = []
+    @people = []
   end
 
   def list_books
@@ -28,7 +27,6 @@ class App
   end
 
   def list_people
-    @students.each { |s| print "[#{s.class}] Name: #{s.name}, ID: #{s.id}, Age: #{s.age}\n" }
-    @teachers.each { |s| print "[#{s.class}] Name: #{s.name}, ID: #{s.id}, Age: #{s.age}\n" }
+    @people.each { |s| print "[#{s.class}] Name: #{s.name}, ID: #{s.id}, Age: #{s.age}\n" }
   end
 end

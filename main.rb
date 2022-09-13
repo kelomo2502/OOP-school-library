@@ -18,7 +18,7 @@ end
 
 def main
   app = App.new
-  interraction(app)
+  interactions = Interaction.new
+  interactions.interaction(app)
 end
-
 main

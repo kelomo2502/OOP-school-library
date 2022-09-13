@@ -1,4 +1,5 @@
 require './app'
+require './create_person.rb'
 
 def options
   print "\nPlease choose an option by entering a number \n\n"

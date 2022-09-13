@@ -2,6 +2,7 @@ require './app'
 require './create_person'
 require './create_book'
 require './create_rental'
+require './interaction'
 
 def options
   print "\nPlease choose an option by entering a number \n\n"
@@ -14,8 +15,6 @@ def options
   print "7 - Quit \n"
   gets.chomp.to_i
 end
-
-
 
 def main
   app = App.new

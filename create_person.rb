@@ -1,8 +1,9 @@
-class Create_Person
+class CreatePerson
   def initialize(people)
     @people = people
   end
 
+  # rubocop:disable Metrics/CyclomaticComplexity
   def create_person
     print "Do you want to create: \n 1 - Student \n 2 - Teacher \n 3 - Cancel \n "
     user_input = gets.chomp.to_i
@@ -42,4 +43,5 @@ class Create_Person
       create_person
     end
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 end

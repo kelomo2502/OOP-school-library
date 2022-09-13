@@ -1,4 +1,4 @@
-class Create_Book
+class CreateBook
   def initialize(book)
     @book = book
   end
@@ -10,7 +10,7 @@ class Create_Book
     print ' Enter author name: '
     author = gets.chomp
     new_book = Book.new(title, author)
-    @books << new_book
+    @book << new_book
     puts " '#{new_book.title}' added successfully"
   end
 end

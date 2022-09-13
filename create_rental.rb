@@ -1,4 +1,4 @@
-class create_rental
+class Create_Rental
   def initialize(rental, books, people)
     @rental = rental
     @books = books

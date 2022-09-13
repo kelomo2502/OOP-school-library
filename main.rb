@@ -1,7 +1,7 @@
 require './app'
 require './create_person'
 require './create_book'
-require './create_rental.rb'
+require './create_rental'
 
 def options
   print "\nPlease choose an option by entering a number \n\n"

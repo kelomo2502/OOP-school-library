@@ -35,17 +35,6 @@ class App
   # rubocop:disable Metrics/CyclomaticComplexity
   # rubocop:enable Metrics/CyclomaticComplexity
 
-  def create_book
-    print "Create book \n"
-    print ' Enter book title: '
-    title = gets.chomp
-    print ' Enter author name: '
-    author = gets.chomp
-    new_book = Book.new(title, author)
-    @books << new_book
-    puts " '#{new_book.title}' added successfully"
-  end
-
   def create_rental
     puts 'Enter date'
     date = gets.chomp

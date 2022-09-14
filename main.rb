@@ -2,7 +2,7 @@ require './app'
 require './create_person'
 require './create_book'
 require './create_rental'
-require './interractions'
+require './interactions'
 
 def options
   print "\nPlease choose an option by entering a number \n\n"
@@ -18,8 +18,8 @@ end
 
 def main
   app = App.new
-  interractions = Interraction.new
-  interractions.interraction(app)
+  interactions = Interaction.new
+  interactions.interaction(app)
 end
 
 main

@@ -37,7 +37,7 @@ class App
     puts 'Enter person ID: '
     user_input = gets.chomp.to_i
     user_rentals = []
-    @rentals[0].each { |r| user_input == r['ID'] ? user_rentals << r : '' }
+    @rentals[0].each { |r| user_input == r['ID'.to_i] ? user_rentals << r : '' }
 
     print "Rentals: \n"
     user_rentals.each { |r| print " Date: #{r['Date']}, Title: #{r['Title']}, Author: #{r['Author']}\n" }

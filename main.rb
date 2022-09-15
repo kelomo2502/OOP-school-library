@@ -2,7 +2,7 @@ require './app'
 require './create_person'
 require './create_book'
 require './create_rental'
-require './interaction'
+require './interactions'
 
 def options
   print "\nPlease choose an option by entering a number \n\n"
@@ -21,4 +21,5 @@ def main
   interactions = Interaction.new
   interactions.interaction(app)
 end
+
 main

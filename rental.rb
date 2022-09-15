@@ -1,11 +1,11 @@
-class Rentals
+class Rental
   attr_accessor :date, :book, :person
 
-  def initialize(date, book, person)
+  def initialize(date, book = { Rentals: [] }, person = { Rentals: [] })
     @date = date
     @book = book
-    book.rentals << self
+    book['Rentals'] << self
     @person = person
-    person.rentals << self
+    person['Rentals'] << self
   end
 end
